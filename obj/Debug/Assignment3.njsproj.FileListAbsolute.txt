@@ -1,0 +1,2 @@
+C:\Users\vipul\Desktop\New folder\Assignment3\Assignment3\obj\Debug\Assignment3.njsprojResolveAssemblyReference.cache
+C:\Users\vipul\Desktop\New folder\Assignment3\Assignment3\bin\Microsoft.NodejsTools.WebRole.dll

@@ -1,0 +1,45 @@
+﻿<h3>Patient Details</h3>
+<b>Filter list using Last Name:</b>
+<input ng-model="query.lastname" class="form-control" />
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>
+            #Sr.No
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Age
+        </th>
+        <th>
+            Doctor Name
+        </th>
+        <th>
+            cell Number
+        </th>
+        <th>
+            Visited Date
+        </th>
+        <th>
+            Last accessed Date
+        </th>
+        <th colspan="2">Actions</th>
+    </tr>
+    <tr ng-repeat="patientModel in patientModels | filter:query ">
+        <td>{{$index+1}}</td>
+        <td>{{patientModel.firstname}}</td>
+        <td>{{patientModel.lastname}}</td>
+        <td>{{patientModel.age}}</td>
+        <td>{{patientModel.family_doctor_id}}</td>
+        <td>{{patientModel.phoneno}}</td>
+        <td>{{patientModel.created_at|date:'medium'}}</td>
+        <td>{{patientModel.last_modified|date:'medium'}}</td>
+        <td><button class="btn btn-warning" ng-click="select(patientModel._id)">Select</button></td>
+        <td><button type="submit" ng-disabled="myFrom.$invalid" ng-click="remove(patientModel)" class="btn btn-danger">Delete</button></td>
+    </tr>
+</table>
