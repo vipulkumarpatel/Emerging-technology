@@ -9,7 +9,7 @@ var session = require('express-session');
 var mongoose = require('mongoose');
 
 app.use(express.static(__dirname));
-app.listen(process.env.PORT || 5000)
+app.listen(process.env.PORT || 5000);
 
 //database connection
 var db = mongoose.connect('mongodb://vipul188:Vipul123@ds061711.mongolab.com:61711/myhmis');
